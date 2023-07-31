@@ -5,8 +5,8 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/old-blog/:path*",
-        destination: "/new-sexy-blog/:path*",
+        source: "/old-blog/:path*", // 이전 페이지 경로
+        destination: "/new-sexy-blog/:path*", // 새로운 페이지 경로
         permanent: false,
       },
     ];
@@ -14,8 +14,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/api/movies",
-        destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
+        source: "/api/movies", // 원래 요청되는 경로
+        destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`, // 새로 매핑할 경로
       },
       {
         source: "/api/movies/:id",
